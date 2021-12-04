@@ -1,8 +1,8 @@
 module Main where
 
-import Data.List (tails)
-import System.Environment
-import Text.Printf
+import           Data.List          (tails)
+import           System.Environment
+import           Text.Printf
 
 zipWithNext :: [a] -> [(a, a)]
 zipWithNext xs = zip xs $ tail xs

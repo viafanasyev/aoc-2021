@@ -1,7 +1,7 @@
 module Main where
 
-import System.Environment
-import Text.Printf
+import           System.Environment
+import           Text.Printf
 
 zipWithNext :: [a] -> [(a, a)]
 zipWithNext xs = zip xs $ tail xs
