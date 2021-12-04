@@ -1,13 +1,13 @@
 module Main where
 
-import Data.List (group, maximumBy, minimumBy, sort)
-import Data.Ord (comparing)
-import System.Environment
-import Text.Printf
+import           Data.List          (group, maximumBy, minimumBy, sort)
+import           Data.Ord           (comparing)
+import           System.Environment
+import           Text.Printf
 
 transpose :: [[a]] -> [[a]]
 transpose ([]:_) = []
-transpose x = (map head x) : transpose (map tail x)
+transpose x      = (map head x) : transpose (map tail x)
 
 mostCommon :: Ord a => [a] -> a
 mostCommon = head . maximumBy (comparing length) . group . sort

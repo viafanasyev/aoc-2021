@@ -1,19 +1,19 @@
 module Main where
 
-import Data.List (group, maximumBy, sort)
-import Data.Ord (comparing)
-import System.Environment
-import Text.Printf
+import           Data.List          (group, maximumBy, sort)
+import           Data.Ord           (comparing)
+import           System.Environment
+import           Text.Printf
 
 transpose :: [[a]] -> [[a]]
 transpose ([]:_) = []
-transpose x = (map head x) : transpose (map tail x)
+transpose x      = (map head x) : transpose (map tail x)
 
 mostCommon :: Ord a => [a] -> a
 mostCommon = head . maximumBy (comparing length) . group . sort
 
 invertBinary :: String -> String
-invertBinary [] = []
+invertBinary []       = []
 invertBinary ('0':xs) = '1' : invertBinary xs
 invertBinary ('1':xs) = '0' : invertBinary xs
 
