@@ -1,13 +1,13 @@
 module Main where
 
-import System.Environment
-import Text.Printf
+import           System.Environment
+import           Text.Printf
 
 toDelta :: String -> (Int, Int)
 toDelta ('f':'o':'r':'w':'a':'r':'d':' ':d) = (read d :: Int, 0)
-toDelta ('d':'o':'w':'n':' ':d) = (0, read d :: Int)
-toDelta ('u':'p':' ':d) = (0, -(read d :: Int))
-toDelta _ = undefined
+toDelta ('d':'o':'w':'n':' ':d)             = (0, read d :: Int)
+toDelta ('u':'p':' ':d)                     = (0, -(read d :: Int))
+toDelta _                                   = undefined
 
 main :: IO ()
 main = do
