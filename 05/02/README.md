@@ -1,0 +1,4 @@
+# Run
+```console
+make
+```
