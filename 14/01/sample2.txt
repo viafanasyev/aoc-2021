@@ -1,0 +1,6 @@
+XX
+
+XX -> Y
+XY -> Y
+YX -> X
+YY -> Y
