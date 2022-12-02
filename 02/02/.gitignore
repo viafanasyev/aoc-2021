@@ -5,6 +5,8 @@
 !*.*
 # Unignore all dirs
 !*/
+# Unignore Makefile
+!Makefile
 
 *.o
 *.hi
